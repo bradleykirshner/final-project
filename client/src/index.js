@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import GetAllRooms from './getAllRooms';
+import GetRoomById from './getRoomById';
+import CreateRoom from './createRoom';
+import UpdateRoom from './updateRoom';
+import DeleteRoom from './deleteRoom';
+import PatchRoom from './patchRoom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <GetAllRooms />
+      <GetRoomById />
+      <CreateRoom />
+      <UpdateRoom />
+      <DeleteRoom />
+      <PatchRoom />
+    </BrowserRouter>
   </React.StrictMode>
 );
 
